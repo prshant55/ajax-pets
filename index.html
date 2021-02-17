@@ -51,7 +51,7 @@
                
                $("#output").html(output);
                //alert(feels);
-              $('#pet').load(`includes/content.html ' ${pet}`);
+              $('#pet').load(`includes/content.html #${pet}`);
                e.preventDefault();//no need to submit as you'll be doing AJAX on this page
        
            });
@@ -65,7 +65,7 @@
        <h3>Feels</h3>
        <p>Please choose how you would like your pet to feel:</p>
        <input type="radio" name="feels" value="fluffy" required="required">fluffy <br />
-       <input type="radio" name="feels" value="scaly">scaly <br />
+       <input type="radio" name="feels" value="scaly" required="required">scaly <br />
    </div>
    <div id="pet_likes">
        <h3>Likes</h3>
