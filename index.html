@@ -6,6 +6,7 @@
    <title>AJAX Pet Starter</title>
    <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
    <script type="text/javascript">
+        //$("output").hide();
        $("document").ready(function(){
             $("#pet_likes").hide();    
             $("#pet_eats").hide(); 
@@ -56,10 +57,13 @@
                     pet="lab";
                 }
                 
-             let output= './images/';
-             output =output+pet+".jpg";          
-             $("#pet").html(pet); 
-             document.getElementById('image').src = output;
+             let output= '<img src = "./images/';
+             output =output+pet+".jpg\">";          
+             $("#pet").html(pet);
+            
+             $("#output").html(output);
+ 
+            document.getElementById('output').src = output;
              $("#ouput").html(output);
                //alert(feels);
               $('#pet').load(`includes/content.html #${pet}`);
@@ -98,9 +102,10 @@
    </div>
   
    <input type="submit" value="submit it!" />
-   <img src="blank.png" id="image" alt="just nothing">
+ 
    <div id="pet">PET pick goes here!</div>
    <div id="output">Output goes here!</div>
+   
 </form>
 </body>
 </html>
